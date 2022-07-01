@@ -29,11 +29,17 @@ html,body{
 .bg-black{
     background-color: black;
 }
+.bg-lightgray{
+    background-color: rgb(240, 231, 231);
+}
 .a-center{
     text-align: center;
 }
 .a-left{
     text-align: left;
+}
+.a-Right{
+    text-align: right;
 }
 .bg-gray{
     background-color:rgb(232, 224, 224);
@@ -44,12 +50,53 @@ html,body{
 .in-Table{
     display: inline-table;
 }
+.float-r{
+    float: right;
+}
+.float-l{
+    float: left;
+}
+.clear::after{
+    display: table;
+    content: "";
+    clear: both;
+}
 .m-1{
     margin-left: 1.5rem;
+}
+.m-2{
+    margin-top: 2rem;
 }
 .p-1{
     padding: 2rem;
 }
 .p-2{
     padding: 3rem;
+}
+.p-3{
+    padding: 1rem;
+}
+.p-4{
+    padding-top: 1rem;
+}
+.h-1{
+    height: 60vh;
+}
+input{
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    width: 95%;
+}
+button{
+    padding: 0.5rem;
+    border-radius: 7px;
+    border: none;
+    background-color: rgb(121, 180, 228);
+    color: white;
+    width: 95%;
+
+}
+section{
+    border-radius: 7px;
 }

@@ -50,22 +50,5 @@ function todo() {
         CompleteUl.append(AddLi);
         CheckBtn.style.display = 'none';
     });
-    
-       
-        ResetBtn.append(document.createTextNode("reset"));        cut.style.marginLeft = '10px';
-        
-        ResetBtn.addEventListener('click', function () {
-            UlAdded.append(AddLi);
-            AddLi.append(ResetBtn);
-     });
-
-
-
-    
-
-    
-
-
-    
 };
 

@@ -88,7 +88,7 @@ input{
     padding: 0.5rem;
     width: 95%;
 }
-button{
+.input-button{
     padding: 0.5rem;
     border-radius: 7px;
     border: none;
@@ -99,4 +99,15 @@ button{
 }
 section{
     border-radius: 7px;
+}
+h2{ 
+    background-color: black;
+    padding: 1rem;
+
+}
+ul li{
+    list-style-type: none;
+}
+ul li i{
+    font-size: 2rem;
 }

@@ -28,18 +28,21 @@ body {
 }
 
 .text-yellow {
-    color: #fbd236;;
+    color: #fbd236;
+    ;
 }
 
 .text-white {
     color: white;
 }
-.text-black{
+
+.text-black {
     color: black;
 }
 
 .bg-black {
-    background-color: #2b2f35;;
+    background-color: #2b2f35;
+    ;
 }
 
 .bg-lightgray {
@@ -63,7 +66,7 @@ body {
 }
 
 .w-1 {
-    width: 32%;
+    width: 30%;
 }
 
 .in-Table {
@@ -84,6 +87,10 @@ body {
     clear: both;
 }
 
+.border-1 {
+    border-bottom: 1px solid rgb(133, 133, 133);
+}
+
 .m-1 {
     margin-left: 1.5rem;
 }
@@ -91,7 +98,8 @@ body {
 .m-2 {
     margin-top: 2rem;
 }
-.m-3{
+
+.m-3 {
     margin-right: 1rem;
 }
 
@@ -116,19 +124,19 @@ body {
 }
 
 input {
-    outline: none;
+
     border: none;
-    padding: 0.5rem;
-    width: 95%;
+    padding: 1rem 0rem;
+    width: 100%;
     color: rgb(133, 133, 133);
 }
 
 .input-button {
-    padding: 0.5rem;
+    padding: 1rem 0rem;
     border-radius: 7px;
     border: none;
     background-color: #ebf3f1;
-    color: black;
+    color: #4db194;
     width: 100%;
     margin-top: 0.5rem;
 
@@ -136,11 +144,11 @@ input {
 
 section {
     border-radius: 7px;
+    padding: 1rem;
 }
 
 h2 {
     padding: 1rem;
-    border-bottom: 1px solid rgb(133, 133, 133);
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     text-align: left;
@@ -163,16 +171,22 @@ ul li {
 button {
     margin-left: 1rem;
     float: right;
-    background-color: #e5ecea;
-    color: Black;
+    background-color: #ebf3f1;
+    color: #4db194;
     border-radius: 3px;
     border: none;
     padding: 0.5rem;
 }
 
 button:hover {
-    background-color:  rgb(133, 133, 133);
+    background-color: rgb(133, 133, 133);
 }
-body{
+
+body {
     background-color: white;
+}
+
+.complete>li {
+    text-decoration: line-through;
+    opacity: 0.5;
 }

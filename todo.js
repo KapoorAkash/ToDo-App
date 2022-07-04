@@ -8,18 +8,23 @@ function todo() {
     let ResetBtn = document.createElement("Button");
    
     if(ToDoInput.value===''){
-        window.alert("please enter task");
+        window.alert("Please Enter Any Task");
     }
     else
     {
         
         AddLi.append(document.createTextNode(ToDoInput.value));
         UlAdded.append(AddLi);
+        UlAdded.appendChild(AddLi);
+        // var count = 0; 
+        // count++ ;
+        // let counte=document.querySelector('#counter');
+        // counte.innerHTML = count;
     }
 
         let cut = document.createElement("Button");
         cut.append(document.createTextNode("remove"));
-        cut.style.marginLeft = '10px';
+        // cut.style.marginLeft = '10px';
         AddLi.append(cut);
         cut.addEventListener('click', function () {
         AddLi.remove();

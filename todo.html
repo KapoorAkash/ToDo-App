@@ -24,27 +24,29 @@
             <h1 class="a-left font-2 font-f2 p-3">
                 Project
             </h1>
-            <section class="todo-sec bg-gray w-1 in-Table a-center m-2 m-3 h-1">
+            <section class="todo-sec bg-gray w-1 in-Table  m-2 m-3 h-1">
 
-                <h2 class="text-black ">
+                <h2 class="text-black inline">
                     ToDo
                 </h2>
-                <!-- <span id="display">
+                <span id="display">
                         0
-                    </span>     -->
-                <input type="text" class="todo-input" placeholder="Add Task">
-                <button type="button" class="input-button" onclick="todo()" id="button">Add</button>
+                    </span>    
+                <form class="todo-form">
+                    <input type="text" class="todo-input" placeholder="Add Task">
+                    <button type="submit" class="input-button" id="button">Add</button>
+                </form>
                 <ul class="ul-list">
                 </ul>
             </section>
-            <section class="progress-sec bg-gray w-1 in-Table a-center m-2 m-3 h-1">
+            <section class="progress-sec bg-gray w-1 in-Table m-2 m-3 h-1">
                 <h2 class="text-black">
                     In Progress
                 </h2>
                 <ul class="inprogress">
                 </ul>
             </section>
-            <section class="complete-sec bg-gray w-1 in-Table a-center m-2 h-1">
+            <section class="complete-sec bg-gray w-1 in-Table m-2 h-1">
                 <h2 class="text-black">
                     Completed
                 </h2>
@@ -54,7 +56,8 @@
             </section>
         </article>
     </main>
-    <script src="todo.js"></script>
+    <!-- <script src="todo.js"></script> -->
+    <script src="todo1.js"></script>
 </body>
 
 </html>

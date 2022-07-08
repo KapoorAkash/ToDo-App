@@ -49,10 +49,6 @@ body {
     background-color: rgb(240, 231, 231);
 }
 
-.a-center {
-    text-align: center;
-}
-
 .a-left {
     text-align: left;
 }
@@ -62,7 +58,7 @@ body {
 }
 
 .bg-gray {
-    background-color: #fafafa;
+    background-color: #f5f9fa;
 }
 
 .w-1 {
@@ -126,9 +122,11 @@ body {
 input {
 
     border: none;
+    border-radius: 7px;
     padding: 1rem 0rem;
     width: 100%;
     color: rgb(133, 133, 133);
+    margin-top: 1rem;
 }
 
 .input-button {
@@ -144,14 +142,20 @@ input {
 
 section {
     border-radius: 7px;
-    padding: 1rem;
+    padding: 1.5rem;
+}
+.inline{
+    display: inline;
 }
 
 h2 {
-    padding: 1rem;
+    /* padding: 1rem; */
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
-    text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+        
 }
 
 ul {
@@ -166,6 +170,7 @@ ul li {
     font-family: sans-serif, sans-serif;
     background-color: #fbfbfb;
     padding: 1rem;
+    margin-top: 1rem;
 }
 
 button {
@@ -189,4 +194,11 @@ body {
 .complete>li {
     text-decoration: line-through;
     opacity: 0.5;
+}
+#display{
+    float: right;
+    background-color: #ebf3f1;
+    padding: 0.3rem 0.5rem;
+    border-radius: 50%;
+    color:#4db194 ;
 }

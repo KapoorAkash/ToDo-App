@@ -68,6 +68,9 @@ body {
 .in-Table {
     display: inline-table;
 }
+.a-center{
+    text-align: center;
+}
 
 .float-r {
     float: right;

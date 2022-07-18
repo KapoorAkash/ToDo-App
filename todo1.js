@@ -1,17 +1,16 @@
+'use strict';
 let tasksArray = [];
-let counterLi = 0;
-let Display = document.querySelector('#display')
-let ToDoInput = document.querySelector('.todo-input');
-let Cut = document.createElement("Button");
-let Start = document.createElement("Button");
+let liCounter = 0;
+let displayCounter = document.querySelector('#display');
+let toDoInput = document.querySelector('.todo-input');
 let formData = document.querySelector('.todo-form');
 formData.addEventListener('submit', function (event) {
     event.preventDefault();
-    if (ToDoInput.value.trim() !== '') {
-        tasksArray.push({ id: Date.now(), text: ToDoInput.value, status: 0 })
-        ToDoInput.value = "";
-        counterLi++;
-        Display.innerHTML = counterLi;
+    if (toDoInput.value.trim() !== '') {
+        tasksArray.push({ id: Date.now(), text: toDoInput.value, status: 0 });
+        toDoInput.value = "";
+        liCounter++;
+        displayCounter.innerHTML = liCounter;
     }
     else {
         window.alert("Please Enter Any Task");
@@ -21,77 +20,65 @@ formData.addEventListener('submit', function (event) {
 });
 
 function render() {
-    var UlAdded = document.querySelector('.ul-list');
-    UlAdded.innerHTML = '';
-    var InprogressUl = document.querySelector('.inprogress')
-    InprogressUl.innerHTML = '';
-    var CompleteUl = document.querySelector('.complete');
-    CompleteUl.innerHTML = '';
+    let ulAdded = document.querySelector('.ul-list');
+    ulAdded.innerHTML = '';
+    let inProgressUl = document.querySelector('.inprogress');
+    inProgressUl.innerHTML = '';
+    let completeUl = document.querySelector('.complete');
+    completeUl.innerHTML = '';
 
     for (let i = 0; i < tasksArray.length; i++) {
-        let AddLi = document.createElement('li');
-        AddLi.setAttribute('id', tasksArray[i].id);
-        AddLi.append(document.createTextNode(tasksArray[i].text));
+        let addLi = document.createElement('li');
+        addLi.setAttribute('id', tasksArray[i].id);
+        addLi.append(document.createTextNode(tasksArray[i].text));
         if (tasksArray[i].status == 0) {
-            // let AddLi = document.createElement('li');
-            // AddLi.setAttribute('id', tasksArray[i].id);
-            // AddLi.append(document.createTextNode(tasksArray[i].text));
-            UlAdded.append(AddLi);
-            deleteId(AddLi);
-            StartId(AddLi);
-
-
+            ulAdded.append(addLi);
+            deleteId(addLi);
+            StartId(addLi);
         }
         else if (tasksArray[i].status === 1) {
-            // let AddLi = document.createElement('li');
-            // AddLi.setAttribute('id', tasksArray[i].id);
-            // AddLi.append(document.createTextNode(tasksArray[i].text));
-            InprogressUl.append(AddLi);
-            deleteId(AddLi);
-            DoneId(AddLi);
-
+            inProgressUl.append(addLi);
+            deleteId(addLi);
+            DoneId(addLi);
         }
         else if (tasksArray[i].status === 2) {
-            // let AddLi = document.createElement('li');
-            // AddLi.setAttribute('id', tasksArray[i].id);
-            // AddLi.append(document.createTextNode(tasksArray[i].text));
-            CompleteUl.append(AddLi);
-            deleteId(AddLi);
+            completeUl.append(addLi);
+            deleteId(addLi);
         }
     }
 }
-function deleteId(AddLi) {
-    let Cut = document.createElement("Button");
-    Cut.append(document.createTextNode("Remove"));
-    AddLi.append(Cut);
-    Cut.addEventListener('click', function () {
-        tasksArray = tasksArray.filter(em => em.id != AddLi.getAttribute('id'));
-        AddLi.remove();
-        if (counterLi > 0) {
-            counterLi--;
-            Display.innerHTML = counterLi;
+function deleteId(addLi) {
+    let deleteButton = document.createElement("Button");
+    deleteButton.append(document.createTextNode("Remove"));
+    addLi.append(deleteButton);
+    deleteButton.addEventListener('click', function () {
+        tasksArray = tasksArray.filter(em => em.id != addLi.getAttribute('id'));
+        addLi.remove();
+        if (liCounter > 0) {
+            liCounter--;
+            displayCounter.innerHTML = liCounter;
         }
     })
 }
-function StartId(AddLi) {
-    let Start = document.createElement("Button");
-    Start.append(document.createTextNode("Start"))
-    AddLi.append(Start);
-    Start.addEventListener('click', function () {
-        tasksArray[tasksArray.findIndex(e => e.id == AddLi.getAttribute('id'))].status = 1;
+function StartId(addLi) {
+    let startButton = document.createElement("Button");
+    startButton.append(document.createTextNode("Start"));
+    addLi.append(startButton);
+    startButton.addEventListener('click', function () {
+        tasksArray[tasksArray.findIndex(e => e.id == addLi.getAttribute('id'))].status = 1;
         render();
-        if (counterLi > 0) {
-            counterLi--;
-            Display.innerHTML = counterLi;
+        if (liCounter > 0) {
+            liCounter--;
+            displayCounter.innerHTML = liCounter;
         }
     })
 }
-function DoneId(AddLi) {
+function DoneId(addLi) {
     let Done = document.createElement("button");
     Done.append(document.createTextNode("Done"));
-    AddLi.append(Done);
+    addLi.append(Done);
     Done.addEventListener('click', function () {
-        tasksArray[tasksArray.findIndex(m => m.id == AddLi.getAttribute('id'))].status = 2;
+        tasksArray[tasksArray.findIndex(m => m.id == addLi.getAttribute('id'))].status = 2;
         render();
     })
 }
